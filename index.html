@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Advanced All-in-One Web Project</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🌐 Web Project Hub</h1>
+    <nav>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#todo">To‑Do</a>
+      <a href="#products">Products</a>
+    </nav>
+    <button id="theme-toggle" class="btn-toggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+  </header>
+
+  <main>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section" tabindex="0">
+      <h2>Portfolio</h2>
+      <p>Hello! I'm a web developer passionate about clean UI and interactive experiences.</p>
+      <form id="contact-form" aria-label="Contact form">
+        <input type="text" placeholder="Name" required aria-required="true" />
+        
+        <textarea placeholder="Message" required aria-required="true"></textarea>
+        <button type="submit" class="btn-contact">Send</button>
+        <p id="contact-status" role="alert" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <!-- To-Do List Section -->
+    <section id="todo" class="section" tabindex="0">
+      <h2>To‑Do List App</h2>
+      <form id="todo-form" aria-label="Add new task form">
+        <input type="text" id="todo-input" placeholder="New task..." required aria-required="true" />
+        <button type="submit" class="btn-todo-add">Add</button>
+      </form>
+      <div class="todo-filters" role="group" aria-label="To-do filters">
+        <button class="btn-todo-filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="btn-todo-filter" data-filter="active" aria-pressed="false">Active</button>
+        <button class="btn-todo-filter" data-filter="completed" aria-pressed="false">Completed</button>
+      </div>
+      <ul id="todo-list" aria-live="polite" aria-relevant="additions removals"></ul>
+      <button class="btn-todo-clear" id="clear-completed">Clear Completed</button>
+    </section>
+
+    <!-- Product Listing Section -->
+    <section id="products" class="section" tabindex="0">
+      <h2>Product Listing</h2>
+      <label for="categoryFilter">Category:</label>
+      <select id="categoryFilter" aria-controls="product-grid">
+        <option value="all">All</option>
+        <option value="tech">Tech</option>
+        <option value="fashion">Fashion</option>
+      </select>
+
+      <label for="sortBy">Sort:</label>
+      <select id="sortBy" aria-controls="product-grid">
+        <option value="default">Default</option>
+        <option value="priceLow">Price: Low to High</option>
+        <option value="priceHigh">Price: High to Low</option>
+      </select>
+
+      <div id="product-grid" class="grid" role="list" aria-label="Product list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p style="text-align:center; margin-top:2rem; font-size:0.9rem; color:gray;">
+      © 2025 Your Name | Built with ❤️ and JavaScript
+    </p>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
